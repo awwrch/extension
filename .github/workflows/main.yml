@@ -4,6 +4,9 @@ jobs:
   build:
     name: Bundle and Publish Sources
     runs-on: ubuntu-latest
+    # Required so the deploy step can push to the gh-pages branch with GITHUB_TOKEN
+    permissions:
+      contents: write
 
     steps:
       - name: Checkout Branch
